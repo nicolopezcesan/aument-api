@@ -18,8 +18,13 @@ const apiRoute = require('./app/routes/api-route');
 
 app.use('/api', apiRoute);
 
-app.use((err, req, res, next) => { // eslint-disable-line
+app.use((err, req, res) => {
   res.status(500).send({ code: 'error', message: err.message });
 });
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server running int http://localhost:${process.env.PORT}`);
+});
+
 
 module.exports = app;

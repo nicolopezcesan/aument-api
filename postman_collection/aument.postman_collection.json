@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "1f2edcd0-0201-4a8b-a23f-adca770dd5a2",
+		"name": "aument",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{AUMENT_URL}}/api/posts",
+					"host": [
+						"{{AUMENT_URL}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "623aa2ff3c18791d496db501",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/posts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Mensaje de Nico 77\",\n    \"text\": \"Buen dìa!\",\n    \"image\": \"reptile.jpg\",\n    \"tag\": \"IT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AUMENT_URL}}/api/posts",
+					"host": [
+						"{{AUMENT_URL}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/posts",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{AUMENT_URL}}/api/posts?id=623cb445cf9d41803e9900f1&title=Test&text=another wall&image=tasks.jpg&tag=JQUERY",
+					"host": [
+						"{{AUMENT_URL}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "623cb445cf9d41803e9900f1"
+						},
+						{
+							"key": "title",
+							"value": "Test"
+						},
+						{
+							"key": "text",
+							"value": "another wall"
+						},
+						{
+							"key": "image",
+							"value": "tasks.jpg"
+						},
+						{
+							"key": "tag",
+							"value": "JQUERY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/posts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{AUMENT_URL}}/api/posts?id=622fe815f3f58db845a645b8",
+					"host": [
+						"{{AUMENT_URL}}"
+					],
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "622fe815f3f58db845a645b8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

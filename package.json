@@ -1,11 +1,14 @@
 {
-  "name": "reviews_and_ratings",
-  "version": "1.0.2",
+  "name": "aument-backend",
+  "version": "1.0.0",
   "description": "",
   "main": "./bin/www",
   "scripts": {
     "start": "nodemon ./bin/www",
-    "test": "mocha ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js -t 10000"
+    "dev": "node app.js",
+    "build": "webpack",
+    "test": "mocha ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js -t 10000",
+    "coverage-table": "nyc  ./node_modules/mocha/bin/mocha ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js !./app/services/* -t 10000"
   },
   "nyc": {
     "include": [
@@ -28,7 +31,6 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.2",
-    "concurrently": "^5.0.2",
     "cors": "^2.8.4",
     "debug": "^4.2.0",
     "dotenv": "^8.1.0",
@@ -36,18 +38,11 @@
     "express-routemap": "^1.1.0",
     "mongoose": "^5.8.3",
     "node-cache": "^5.1.2",
-    "node-mocks-http": "^1.8.1",
-    "querystring": "^0.2.0",
-    "should": "^13.2.3",
-    "swagger-ui-express": "^4.0.7",
-    "unit-test": "0.0.9",
-    "yamljs": "^0.3.0"
+    "node-mocks-http": "^1.11.0",
+    "should": "^13.2.3"
   },
   "devDependencies": {
-    "artillery": "^1.6.0-13",
     "chai": "^4.2.0",
-    "chakram": "^1.5.0",
-    "depcheck": "0.6.7",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-airbnb-base": "^11.2.0",
@@ -57,16 +52,12 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-watch": "^3.1.4",
     "husky": "^0.14.3",
-    "istanbul": "^1.1.0-alpha.1",
-    "lint-staged": "^7.2.0",
     "mocha": "^3.5.3",
     "mochawesome": "^2.3.0",
     "mockery": "2.0.0",
     "nodemon": "^1.11.0",
-    "npm-check": "^5.9.0",
-    "npm-run-all": "^4.0.2",
     "nyc": "^12.0.2",
     "sinon": "^7.5.0",
-    "yargs": "^12.0.1"
+    "webpack": "^5.19.0"
   }
 }

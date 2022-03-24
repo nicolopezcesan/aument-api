@@ -4,12 +4,11 @@ const { mongodbUri } = require('./config');
 const mongoOptions = { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false };
 
 mongoose.connect(
-  mongodbUri || 'localhost:27017',
+  mongodbUri,
   mongoOptions,
-  (err, res) => {
+  (err) => {
     if (err) throw err;
-
-    console.log(`Mongodb running ${res}`);
+    console.log('Mongodb running');
   }
 );
 
@@ -18,7 +17,7 @@ mongoose.connection.on('disconnected', () => {
   if (mongoose.connection.readyState === 0) {
     mongoose.connection.readyState = 2;
     setTimeout(() => {
-      mongoose.connect(`${mongodbUri}`, mongoOptions);
+      mongoose.connect(mongodbUri, mongoOptions);
     }, 1000);
   }
 });
