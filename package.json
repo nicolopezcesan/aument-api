@@ -17,8 +17,6 @@
       "./app/**/**/*.js"
     ],
     "exclude": [
-      "./app/log-config/*.js",
-      "./app/config/config*.js",
       "./app/models/*.js",
       "**/*.spec.js",
       "**/**/*.spec.js",
@@ -26,7 +24,6 @@
     ],
     "all": true
   },
-  "author": "Backoffice Team",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
