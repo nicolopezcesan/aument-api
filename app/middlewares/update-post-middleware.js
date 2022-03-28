@@ -4,7 +4,7 @@ const Post = require('../models/post-model');
 module.exports.updatePostMiddleware = async (req, res, next) => {
   try {
     // validar si intento editar un post que no existe
-    const post = req.query;
+    const post = req.body;
     await Post.updateOne({ _id: post.id }, post);
     req.response = 'Post has been updated';
     return next();

@@ -1,4 +1,3 @@
-// const { myCache } = require('../util/cache');
 const Router = require('express').Router;
 const {
   getPosts,
